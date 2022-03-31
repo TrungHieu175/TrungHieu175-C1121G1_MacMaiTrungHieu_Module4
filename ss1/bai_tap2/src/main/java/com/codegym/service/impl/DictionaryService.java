@@ -8,17 +8,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 @Service
 public class DictionaryService implements IDictionaryService {
+
     private static List<Dictionary> dictionaries = new ArrayList<>();
+
     static {
-        dictionaries.add(new Dictionary("hello","xin chao"));
-        dictionaries.add(new Dictionary("anh hieu","dep trai"));
-        dictionaries.add(new Dictionary("hieu mm","rat dep trai"));
-        dictionaries.add(new Dictionary("cat","con meo"));
-        dictionaries.add(new Dictionary("coin card","dong xu the"));
-        dictionaries.add(new Dictionary("dog","con co ho"));
+        dictionaries.add(new Dictionary("hello","xin chào"));
+        dictionaries.add(new Dictionary("anh hieu","đẹp trai"));
+        dictionaries.add(new Dictionary("hieu mm","rất đẹp trai"));
+        dictionaries.add(new Dictionary("cat","con mèo"));
+        dictionaries.add(new Dictionary("coin","đồng xu"));
+        dictionaries.add(new Dictionary("card","thẻ"));
+        dictionaries.add(new Dictionary("dog","con chó"));
     }
+
     @Override
     public List<Dictionary> findAll() {
         return dictionaries;

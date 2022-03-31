@@ -1,5 +1,5 @@
 package com.codegym.service;
 
 public interface IConverterService {
-    int converteUsd(int a);
+    int converterUsd(int a);
 }

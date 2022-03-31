@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConverterService implements IConverterService {
     @Override
-    public int converteUsd(int a) {
+    public int converterUsd(int a) {
         return  a * 23000;
     }
 }

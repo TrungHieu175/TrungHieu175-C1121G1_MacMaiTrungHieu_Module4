@@ -6,44 +6,45 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
 <h1>Settings</h1>
-<form action="update" method="post">
+<form:form action="/view" method="post" modelAttribute="mail">
 
     <label for="languages"><strong>Languages :</strong></label>
-    <select id="languages" name="languages">
+    <form:select id="languages" name="languages" path="language">
         <option value="english">English</option>
         <option value="vietnamese">Vietnamese</option>
         <option value="japanese">Japanese</option>
         <option value="chinese">Chinese</option>
-    </select><br><br>
+    </form:select><br><br>
 
     <label for="size"><strong>Page Size :</strong></label>
     <span>Show
-    <select id="size" name="size">
-        <option value="english">5</option>
-        <option value="vietnamese">10</option>
-        <option value="japanese">15</option>
-        <option value="chinese">20</option>
-        <option value="chinese">25</option>
-        <option value="chinese">50</option>
-        <option value="chinese">100</option>
-    </select> emails per page</span><br><br>
+    <form:select id="size" name="size" path="pageSize">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </form:select> emails per page</span><br><br>
 
     <label for="fillter"><strong>Spams fillter :</strong></label>
-    <input type="checkbox" id="fillter" name="fillter">
+    <form:checkbox id="fillter" name="fillter" path="spamsFillter" value="1"/>
     <label for="fillter"> Enable spam fillter</label><br><br>
 
     <label for="signature"><strong>Signature :</strong></label>
-    <textarea name="signature" rows="10" cols="30" id="signature">Thor Son of Odin
-    </textarea><br><br>
+    <form:textarea name="signature" rows="10" cols="30" id="signature" path="signature"/><br><br>
 
     <input type="submit" value="Update">
-    <input type="submit" value="Cancel">
-</form>
+    <a href="/view">Cancel</a>
+</form:form>
 </body>
 </html>

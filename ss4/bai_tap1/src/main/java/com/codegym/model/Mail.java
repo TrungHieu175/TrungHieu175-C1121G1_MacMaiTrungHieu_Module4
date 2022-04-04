@@ -4,13 +4,13 @@ public class Mail {
     private Integer id;
     private String language;
     private Integer pageSize;
-    private Boolean spamsFillter;
+    private Integer spamsFillter;
     private String signature;
 
     public Mail() {
     }
 
-    public Mail(Integer id, String language, Integer pageSize, Boolean spamsFillter, String signature) {
+    public Mail(Integer id, String language, Integer pageSize, Integer spamsFillter, String signature) {
         this.id = id;
         this.language = language;
         this.pageSize = pageSize;
@@ -42,11 +42,11 @@ public class Mail {
         this.pageSize = pageSize;
     }
 
-    public Boolean getSpamsFillter() {
+    public Integer getSpamsFillter() {
         return spamsFillter;
     }
 
-    public void setSpamsFillter(Boolean spamsFillter) {
+    public void setSpamsFillter(Integer spamsFillter) {
         this.spamsFillter = spamsFillter;
     }
 

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a57a56a0-86e7-4aba-8210-239ac970ccc5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/src/main/java/com/codegym/controller/MailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_tap1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/build/classes/java/main/com/codegym/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/build/libs/bai_tap2-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/build/libs/bai_tap2-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/src/main/java/com/codegym/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/src/main/java/com/codegym/controller/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/bai_tap2/src/main/webapp/WEB-INF/views/calculator.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss2/bai_tap2/src/main/webapp/WEB-INF/views/calculator.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/.idea/bai_tap.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/hom_thu_dien_tu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/controller/MailBoxController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/model/MailBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/service/IMailBoxService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/classes/java/main/mail_box/service/impl/MailBoxService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/libs/hom_thu_dien_tu-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/controller/MailBoxController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/model/MailBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/service/IMailBoxService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/java/mail_box/service/impl/MailBoxService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/webapp/WEB-INF/views/setting.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai1/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/to_khai_y_te.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/config/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/config/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/model/ToKhaiYTe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/repository/IYTeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/repository/impl/YTeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/service/IYTeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/classes/java/main/khai_bao_y_te/service/impl/YTeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/libs/to_khai_y_te-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/boostrap/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/success.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/WEB-INF/views/to-khai-y-te.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_tap/bai2/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/classes/java/main/data_binding/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/classes/java/main/data_binding/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/classes/java/main/data_binding/controller/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/classes/java/main/data_binding/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/libs/form_data_binding-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/java/data_binding/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/java/data_binding/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/java/data_binding/controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/java/data_binding/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/webapp/WEB-INF/views/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/webapp/WEB-INF/views/info.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/form_data_binding/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/configuration/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/configuration/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/model/ProductForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/classes/java/main/up_load/service/impl/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/libs/upload_file-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/resources/main/upload_file.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/configuration/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/configuration/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/model/ProductForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/java/up_load/service/impl/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/resources/upload_file.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/upload_file/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="27BIL18MhLLVtnXiheZFPlIrQ6P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodeGym\Module 4\ss4\thuc_hanh2\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.58" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.58" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : thuc_hanh2-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9c6a3e3e-74cb-41b9-b989-0ceb156e9345" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56379" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : thuc_hanh2-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a57a56a0-86e7-4aba-8210-239ac970ccc5" name="Changes" comment="" />
+      <created>1648786995054</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648786995054</updated>
+      <workItem from="1648786998453" duration="5859000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

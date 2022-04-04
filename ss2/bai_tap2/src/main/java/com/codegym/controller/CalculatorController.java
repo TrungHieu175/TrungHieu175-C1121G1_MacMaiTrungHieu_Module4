@@ -7,28 +7,35 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @org.springframework.stereotype.Controller
 public class CalculatorController {
+
     @GetMapping("")
-    public String goCalculator(){
+    public String goCalculator(Model model) {
+        Double total = 0.0;
+        model.addAttribute("total", total);
         return "calculator";
     }
+
     @RequestMapping("/calculator")
-    public String calculator(@RequestParam Double number1, @RequestParam Double number2, @RequestParam String dau, Model model){
+    public String calculator(@RequestParam Double number1, @RequestParam Double number2, @RequestParam String operator, Model model) {
         Double total = 0.0;
-        switch (dau){
-            case "Addition(+)" :
+        switch (operator) {
+            case "+":
                 total = number1 + number2;
                 break;
-            case "Subtraction(-)" :
+            case "-":
                 total = number1 - number2;
                 break;
-            case "Mutiplication(*)" :
+            case "*":
                 total = number1 * number2;
                 break;
-            case "Division(/)" :
+            case "/":
                 total = number1 / number2;
                 break;
+            default:
+                total = 0.0;
+                break;
         }
-        model.addAttribute("total",total);
+        model.addAttribute("total", total);
         return "calculator";
     }
 }

@@ -20,10 +20,10 @@
     <input type="text" id="number2" name="number2"></span>
     <br><br>
     <span>
-        <button type="submit" value="Addition(+)" name="dau">Addition(+)</button>
-        <button type="submit" value="Subtraction(-)" name="dau">Subtraction(-)</button>
-        <button type="submit" value="Mutiplication(*)" name="dau">Mutiplication(*)</button>
-        <button type="submit" value="Division(/)" name="dau">Division(/)</button>
+        <button type="submit" value="+" name="operator">Addition(+)</button>
+        <button type="submit" value="-" name="operator">Subtraction(-)</button>
+        <button type="submit" value="*" name="operator">Mutiplication(*)</button>
+        <button type="submit" value="/" name="operator">Division(/)</button>
     </span>
 </form>
 <p>Result : ${total}</p>

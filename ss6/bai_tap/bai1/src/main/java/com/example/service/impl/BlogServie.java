@@ -26,19 +26,12 @@ public class BlogServie implements IBlogService {
     }
 
     @Override
-    public void update(Blog blog, Integer id) {
-        iBlogRepository.update(blog,id);
+    public void deleteById(Integer id) {
+        iBlogRepository.deleteById(id);
     }
 
     @Override
     public Blog findById(Integer id) {
         return iBlogRepository.findById(id).orElse(null);
     }
-
-    @Override
-    public void deleteById(Integer id) {
-        iBlogRepository.deleteById(id);
-    }
-
-
 }

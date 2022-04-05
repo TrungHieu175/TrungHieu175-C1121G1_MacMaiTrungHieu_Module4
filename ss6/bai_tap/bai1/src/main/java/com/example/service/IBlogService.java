@@ -9,9 +9,8 @@ public interface IBlogService {
     List<Blog> findAll();
 
     void save(Blog blog);
-    void update(Blog blog,Integer id);
-
-    Blog findById(Integer id);
 
     void deleteById(Integer id);
+
+    Blog findById(Integer id);
 }

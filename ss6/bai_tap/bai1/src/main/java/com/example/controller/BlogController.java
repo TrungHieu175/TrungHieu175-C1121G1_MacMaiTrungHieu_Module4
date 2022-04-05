@@ -18,47 +18,37 @@ public class BlogController {
     @Autowired
     private IBlogService iBlogService;
 
-    @GetMapping({"","list"})
-    public String goView(Model model){
+    @GetMapping({"", "list"})
+    public String goView(Model model) {
+
         List<Blog> blogList = iBlogService.findAll();
-        model.addAttribute("list",blogList);
+
+        model.addAttribute("list", blogList);
+
         return "list";
     }
-    @GetMapping("/create")
-    public String create(Model model) {
+
+    @GetMapping("addBlog")
+    public String addBlog(Model model) {
         model.addAttribute("blog", new Blog());
-        return "/create";
+        return "addBlog";
     }
 
-    @PostMapping("/save")
+    @GetMapping("edit/{id}")
+    public String editBlog(@PathVariable Integer id, Model model) {
+        Blog blogEdit = iBlogService.findById(id);
+        model.addAttribute("blog", blogEdit);
+        return "editBlog";
+    }
+
+    @PostMapping("save")
     public String save(Blog blog) {
         iBlogService.save(blog);
-        return "redirect:/blog";
+        return "redirect:list";
     }
-    @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("blog", iBlogService.findById(id));
-        return "/edit";
-    }
-    @PostMapping("/update")
-    public String update(Blog blog,Integer id) {
-        iBlogService.update(blog.getId(), id);
-        return "redirect:/blog";
-    }
-    @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("blog", iBlogService.findById(id));
-        return "/delete";
-    }
-    @PostMapping("/delete")
-    public String delete(Blog blog, RedirectAttributes redirect) {
-        iBlogService.deleteById(blog.getId());
-        redirect.addFlashAttribute("success", "Removed customer successfully!");
-        return "redirect:/blog";
-    }
-    @GetMapping("/{id}/view")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("blog", iBlogService.findById(id));
-        return "/view";
+    @GetMapping("delete/{id}")
+    public String deleteBlog(@PathVariable Integer id,Model model){
+        iBlogService.deleteById(id);
+        return "redirect:list";
     }
 }

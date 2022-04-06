@@ -1,30 +1,40 @@
 package com.codegym.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity(name = "product")
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
     private String name;
-    private String email;
-    private String address;
+    private String price;
+    private String introProduct;
+    private String producer;
+
 
     public Product() {
     }
 
-    public Product(int id, String name, String email, String address) {
+    public void setId(Integer id) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.address = address;
     }
 
-    public int getId() {
-        return id;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 
     public String getName() {
@@ -35,19 +45,15 @@ public class Product {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPrice() {
+        return price;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public String getIntroProduct() {
+        return introProduct;
     }
 }

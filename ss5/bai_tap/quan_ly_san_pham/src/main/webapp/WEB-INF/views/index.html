@@ -3,29 +3,31 @@
 <head th:replace="/layout :: head">
 </head>
 <body>
-<h3>Customers</h3>
+<h3>Product</h3>
 <p>
     <a th:href="@{/create}">
         Add new product
     </a>
 </p>
 
-<table id = "customers">
+<table id="customers">
     <thead>
     <tr>
         <th>Name</th>
-        <th>Email</th>
-        <th>Address</th>
+        <th>Price</th>
+        <th>IntroProduct</th>
+        <th>Producer</th>
         <th>Edit</th>
         <th>Delete</th>
         <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="row,rowStat : ${customers}">
+    <tr th:each="row,rowStat : ${product}">
         <td th:text="${row.getName()}"></td>
-        <td th:text="${row.getEmail()}"></td>
-        <td th:text="${row.getAddress()}"></td>
+        <td th:text="${row.getPrice()}"></td>
+        <td th:text="${row.getIntroProduct()}"></td>
+        <td th:text="${row.getProducer()}"></td>
         <td><a th:href="@{{id}/edit(id=${row.getId()})}">edit</a></td>
         <td><a th:href="@{{id}/delete(id=${row.getId()})}">delete</a></td>
         <td><a th:href="@{{id}/view(id=${row.getId()})}">view</a></td>

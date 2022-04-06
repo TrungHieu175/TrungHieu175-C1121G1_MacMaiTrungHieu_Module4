@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head"></head>
 <body>
-<h3>View Customer</h3>
+<h3>View Product</h3>
 <p>
     <a href="/">
         Back to product list
@@ -14,12 +14,16 @@
         <label th:text="${product.name}"></label>
     </div>
     <div class="cusdetail">
-        <label>Email:</label>
-        <label th:text="${product.email}"></label>
+        <label>Price:</label>
+        <label th:text="${product.price}"></label>
     </div>
     <div class="cusdetail">
-        <label>Address:</label>
-        <label th:text="${product.address}"></label>
+        <label>IntroProduct:</label>
+        <label th:text="${product.introProduct}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Producer:</label>
+        <label th:text="${product.producer}"></label>
     </div>
 </div>
 <footer th:replace="/layout :: footer"></footer>

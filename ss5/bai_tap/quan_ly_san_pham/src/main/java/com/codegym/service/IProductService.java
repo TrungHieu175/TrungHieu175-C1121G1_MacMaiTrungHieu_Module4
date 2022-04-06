@@ -12,7 +12,7 @@ public interface IProductService {
 
     Product findById(Integer id);
 
-    void update(Integer id, Product product);
+    void update(Integer id);
 
     void remove(Integer id);
 }

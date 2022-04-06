@@ -3,6 +3,7 @@ package com.codegym.controller;
 import com.codegym.model.Product;
 import com.codegym.service.IProductService;
 import com.codegym.service.impl.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,51 +16,57 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    private final IProductService customerService = new ProductService();
+    @Autowired
+    IProductService iProductService;
 
     @GetMapping("/create")
     public String create(Model model) {
-        model.addAttribute("customer", new Product());
+        model.addAttribute("product", new Product());
         return "/create";
     }
 
-    @GetMapping("")
+    @GetMapping({"","product"})
     public String index(Model model) {
 
-        List<Product> productList = customerService.findAll();
-        model.addAttribute("customers", productList);
+        List<Product> productList = iProductService.findAll();
+        model.addAttribute("product", productList);
         return "/index";
     }
+
     @PostMapping("/save")
     public String save(Product product) {
-        product.setId((int) (Math.random() * 10000));
-        customerService.save(product);
-        return "redirect:/customer";
+        iProductService.save(product);
+        return "redirect:/product";
     }
+
     @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
+    public String edit(@PathVariable Integer id, Model model) {
+        model.addAttribute("product", iProductService.findById(id));
         return "/edit";
     }
+
     @PostMapping("/update")
     public String update(Product product) {
-        customerService.update(product.getId(), product);
-        return "redirect:/customer";
+        iProductService.update(product.getId());
+        return "redirect:/product";
     }
+
     @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
+    public String delete(@PathVariable Integer id, Model model) {
+        model.addAttribute("product", iProductService.findById(id));
         return "/delete";
     }
+
     @PostMapping("/delete")
     public String delete(Product product, RedirectAttributes redirect) {
-        customerService.remove(product.getId());
-        redirect.addFlashAttribute("success", "Removed customer successfully!");
-        return "redirect:/customer";
+        iProductService.remove(product.getId());
+        redirect.addFlashAttribute("success", "Removed product successfully!");
+        return "redirect:/product";
     }
+
     @GetMapping("/{id}/view")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("customer", customerService.findById(id));
+    public String view(@PathVariable Integer id, Model model) {
+        model.addAttribute("product", iProductService.findById(id));
         return "/view";
     }
 }

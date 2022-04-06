@@ -5,21 +5,21 @@
 <h3>View Customer</h3>
 <p>
     <a href="/">
-        Back to customer list
+        Back to product list
     </a>
 </p>
 <div id="detail">
     <div class="cusdetail">
         <label>Name:</label>
-        <label th:text="${customer.name}"></label>
+        <label th:text="${product.name}"></label>
     </div>
     <div class="cusdetail">
         <label>Email:</label>
-        <label th:text="${customer.email}"></label>
+        <label th:text="${product.email}"></label>
     </div>
     <div class="cusdetail">
         <label>Address:</label>
-        <label th:text="${customer.address}"></label>
+        <label th:text="${product.address}"></label>
     </div>
 </div>
 <footer th:replace="/layout :: footer"></footer>

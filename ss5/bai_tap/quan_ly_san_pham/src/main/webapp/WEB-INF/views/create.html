@@ -5,11 +5,11 @@
 <h3>Add Customer</h3>
 <p>
   <a href="/">
-    Back to customer list
+    Back to product list
   </a>
 </p>
 <div id="form">
-  <form th:action="@{/save}" th:object="${customer}"
+  <form th:action="@{/save}" th:object="${product}"
         method="POST" novalidate="novalidate">
     <input type="hidden" th:field="*{id}"/>
     <div>

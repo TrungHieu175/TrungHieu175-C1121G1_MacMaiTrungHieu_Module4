@@ -1,15 +1,18 @@
 package com.codegym.model;
 
-public class Customer {
-    private int id;
+import javax.persistence.Entity;
+
+@Entity(name = "product")
+public class Product {
+    private Integer id;
     private String name;
     private String email;
     private String address;
 
-    public Customer() {
+    public Product() {
     }
 
-    public Customer(int id, String name, String email, String address) {
+    public Product(int id, String name, String email, String address) {
         this.id = id;
         this.name = name;
         this.email = email;

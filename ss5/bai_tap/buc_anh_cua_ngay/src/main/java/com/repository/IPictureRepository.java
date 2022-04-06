@@ -1,16 +1,18 @@
 package com.repository;
 
-import picture_of_day.model.FeedBack;
+import com.model.Picture;
 
 import java.util.List;
 
 public interface IPictureRepository {
 
-    void createFeedback(FeedBack feedBack);
+    void createPicture(Picture picture);
 
-    List<FeedBack> getAllFeedback();
+    List<Picture> getAllPicture();
 
-    FeedBack findFeedbackById(Integer id);
+    Picture findPictureById(Integer id);
 
-    void save(FeedBack feedBack);
+    void save(Picture picture);
+
+    void increateLike(Picture picture);
 }

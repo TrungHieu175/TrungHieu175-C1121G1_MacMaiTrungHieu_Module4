@@ -1,10 +1,8 @@
 package com.repository.impl;
 
+import com.model.Picture;
+import com.repository.IPictureRepository;
 import org.springframework.stereotype.Repository;
-import picture_of_day.model.FeedBack;
-import picture_of_day.repository.BaseRepository;
-import picture_of_day.repository.IPictureRepository;
-
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.time.LocalDate;
@@ -14,35 +12,39 @@ import java.util.List;
 public class PictureRepository implements IPictureRepository {
 
     @Override
-    public void createFeedback(FeedBack feedBack) {
-        feedBack.setLikes(0);
+    public void createPicture(Picture picture) {
+        picture.setLikeComment(0);
         String now = LocalDate.now().toString();
-        feedBack.setDatePicture(now);
+        picture.setComment(now);
         EntityTransaction transaction = BaseRepository.entityManager.getTransaction();
         transaction.begin();
-        BaseRepository.entityManager.persist(feedBack);
+        BaseRepository.entityManager.persist(picture);
         transaction.commit();
     }
 
     @Override
-    public List<FeedBack> getAllFeedback() {
-        String sql = "select f from FeedBack as f ";
-        TypedQuery<FeedBack> query = BaseRepository.entityManager.createQuery(sql, FeedBack.class);
+    public List<Picture> getAllPicture() {
+        String sql = "select p from picture p";
+        TypedQuery<Picture> query = BaseRepository.entityManager.createQuery(sql, Picture.class);
         return query.getResultList();
     }
 
     @Override
-    public FeedBack findFeedbackById(Integer id) {
-        return BaseRepository.entityManager.find(FeedBack.class, id);
+    public Picture findPictureById(Integer id) {
+        return BaseRepository.entityManager.find(Picture.class,id);
     }
 
     @Override
-    public void save(FeedBack feedBack) {
-        EntityTransaction transaction = BaseRepository.entityManager.getTransaction();
-        transaction.begin();
-        BaseRepository.entityManager.merge(feedBack);
-        transaction.commit();
+    public void save(Picture picture) {
+        EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
+        entityTransaction.begin();
+        BaseRepository.entityManager.merge(picture);
+        entityTransaction.commit();
     }
 
-
+    @Override
+    public void increateLike(Picture picture) {
+        picture.setLikeComment(picture.getLikeComment() + 1);
+        BaseRepository.entityManager.merge(picture);
+    }
 }

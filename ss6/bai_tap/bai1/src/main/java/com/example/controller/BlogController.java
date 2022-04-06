@@ -41,14 +41,14 @@ public class BlogController {
         return "editBlog";
     }
 
-    @PostMapping("save")
+    @PostMapping("/save")
     public String save(Blog blog) {
         iBlogService.save(blog);
-        return "redirect:list";
+        return "redirect:/list";
     }
-    @GetMapping("delete/{id}")
+    @GetMapping("/delete/{id}")
     public String deleteBlog(@PathVariable Integer id,Model model){
         iBlogService.deleteById(id);
-        return "redirect:list";
+        return "redirect:/list";
     }
 }

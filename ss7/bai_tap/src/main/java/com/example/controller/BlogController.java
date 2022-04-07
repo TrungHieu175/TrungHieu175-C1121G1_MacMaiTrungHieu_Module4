@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.model.Blog;
+import com.example.model.Category;
 import com.example.service.IBlogService;
 import com.example.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,10 @@ public class BlogController {
 
     @Autowired
     private IBlogService iBlogService;
-    @Autowired
-    private ICategoryService iCategoryService;
+
 
     @GetMapping({"", "list"})
-    public String goView(Model model) {
+    public String goList(Model model) {
 
         List<Blog> blogList = iBlogService.findAll();
 
@@ -53,6 +53,5 @@ public class BlogController {
         iBlogService.deleteById(id);
         return "redirect:/list";
     }
-
 
 }

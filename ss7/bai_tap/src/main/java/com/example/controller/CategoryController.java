@@ -26,24 +26,28 @@ public class CategoryController {
 
         return "view";
     }
+
     @GetMapping("/addCategory")
     public String addCategory(Model model) {
         model.addAttribute("category", new Category());
         return "addCategory";
     }
+
     @PostMapping("/saveCategory")
     public String saveCategory(Category category) {
         iCategoryService.save(category);
         return "redirect:/view";
     }
+
     @GetMapping("editCategory/{id}")
     public String editCategory(@PathVariable Integer id, Model model) {
         Category categoryEdit = iCategoryService.findById(id);
         model.addAttribute("category", categoryEdit);
         return "editCategory";
     }
+
     @GetMapping("/deleteCategory/{id}")
-    public String deleteCategory(@PathVariable Integer id,Model model){
+    public String deleteCategory(@PathVariable Integer id, Model model) {
         iCategoryService.deleteById(id);
         return "redirect:/view";
     }

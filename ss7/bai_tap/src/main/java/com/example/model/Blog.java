@@ -11,6 +11,11 @@ public class Blog {
 
     private String content;
 
+
+    @ManyToOne
+    @JoinColumn(name = "category_id",referencedColumnName = "id")
+    private Category category;
+
     public Blog() {
     }
 
@@ -28,5 +33,13 @@ public class Blog {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

@@ -48,7 +48,7 @@
             </div>
             <div>
                 <label th:text="Deposits" th:for="deposits"></label>
-                <input type="text" th:field="*{deposits}" class="form-control" placeholder="Deposits"/>
+                <input type="number" th:field="*{deposits}" class="form-control" placeholder="Deposits"/>
             </div>
             <div>
                 <h6 th:if="${#fields.hasErrors('deposits')}" th:errors="*{deposits}" style="color: red"></h6>

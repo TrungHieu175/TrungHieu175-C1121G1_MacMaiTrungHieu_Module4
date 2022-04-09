@@ -54,11 +54,11 @@ public class SaveNoteController {
     @GetMapping("edit/{id}")
     public String editSaveNote(@PathVariable Integer id, Model model) {
         SaveNote saveNote = iSaveNoteService.findById(id);
-        List<SaveNote> saveNoteList = iSaveNoteService.findAll();
         List<Customer> customerList = iCustomerService.findAll();
+        SaveNoteDto saveNoteDto = new SaveNoteDto();
+        BeanUtils.copyProperties(saveNote,saveNoteDto);
         model.addAttribute("customerList", customerList);
-        model.addAttribute("saveNoteList", saveNoteList);
-        model.addAttribute("saveNote", saveNote);
+        model.addAttribute("saveNote", saveNoteDto);
         return "editSaveNote";
     }
 

@@ -63,7 +63,7 @@
             </td>
         </tr>
     </table>
-    <a href="/addSaveNote" class="btn btn-success">Add User</a>
+    <a href="/addUser" class="btn btn-success">Add User</a>
     <div>
         <a th:if="${userPage.hasPrevious()}"
            th:href="@{/listUser(page=${userPage.number - 1},keyword=${keywordValue})}">Previous</a>

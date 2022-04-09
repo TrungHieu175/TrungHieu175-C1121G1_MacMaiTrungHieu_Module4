@@ -83,10 +83,4 @@ public class SaveNoteController {
         return "redirect:/listSaveNote";
     }
 
-
-    @GetMapping("/delete/{id}")
-    public String deleteBlog(@PathVariable Integer id, Model model) {
-        iSaveNoteService.deleteById(id);
-        return "redirect:/listSaveNote";
-    }
 }

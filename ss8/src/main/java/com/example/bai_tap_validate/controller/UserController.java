@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -17,11 +18,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 import java.util.Optional;
 
+@Controller
 public class UserController {
+
     @Autowired
     private IUserService iUserService;
 
-    @GetMapping({"", "listSaveNote"})
+    @GetMapping({"", "listUser"})
     public String goList(Model model, @PageableDefault(value = 2) Pageable pageable, @RequestParam Optional<String> keyword, @ModelAttribute User user) {
         String keywordValue = keyword.orElse("");
         Page<User> userPage;
@@ -30,40 +33,38 @@ public class UserController {
         } else {
             userPage = iUserService.findAllByName(pageable);
         }
-        model.addAttribute("saveNotes", userPage);
+        model.addAttribute("userPage", userPage);
         model.addAttribute("keywordValue", keywordValue);
-        return "listSaveNote";
+        return "listUser";
     }
 
-    @GetMapping("addSaveNote")
+    @GetMapping("addUser")
     public String addSaveNote(Model model) {
         List<User> userList = iUserService.findAll();
         model.addAttribute("userList", userList);
         model.addAttribute("userDto", new UserDto());
-        return "addSaveNote";
+        return "addUser";
     }
 
     @GetMapping("edit/{id}")
     public String editSaveNote(@PathVariable Integer id, Model model) {
-        SaveNote saveNote = iSaveNoteService.findById(id);
-        List<Customer> customerList = iCustomerService.findAll();
-        SaveNoteDto saveNoteDto = new SaveNoteDto();
-        BeanUtils.copyProperties(saveNote, saveNoteDto);
-        model.addAttribute("customerList", customerList);
-        model.addAttribute("saveNote", saveNoteDto);
-        return "editSaveNote";
+        User user = iUserService.findById(id);
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(user, userDto);
+        model.addAttribute("userDto", userDto);
+        return "editUser";
     }
 
     @PostMapping("/save")
-    public String save(@Validated @ModelAttribute("saveNote") UserDto userDto, BindingResult bindingResult, Model model) {
+    public String save(@Validated @ModelAttribute("user") UserDto userDto, BindingResult bindingResult, Model model) {
         new UserDto().validate(userDto, bindingResult);
         if (bindingResult.hasErrors()) {
-            return "addSaveNote";
+            return "addUser";
         } else {
             User user = new User();
             BeanUtils.copyProperties(userDto, user);
             iUserService.save(user);
-            return "redirect:/listSaveNote";
+            return "redirect:/listUser";
         }
 
     }
@@ -71,13 +72,7 @@ public class UserController {
     @GetMapping("/remove")
     public String delete(RedirectAttributes redirectAttributes, @RequestParam Integer id) {
         iUserService.deleteById(id);
-        return "redirect:/listSaveNote";
+        return "redirect:/listUser";
     }
 
-
-    @GetMapping("/delete/{id}")
-    public String deleteBlog(@PathVariable Integer id, Model model) {
-        iSaveNoteService.deleteById(id);
-        return "redirect:/listSaveNote";
-    }
 }

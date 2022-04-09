@@ -6,13 +6,16 @@ import com.example.bai_tap_validate.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserService implements IUserService {
 
     @Autowired
     private IUserRepository iUserRepository;
+
     @Override
     public void save(User user) {
         iUserRepository.save(user);
@@ -30,7 +33,7 @@ public class UserService implements IUserService {
 
     @Override
     public Page<User> findByName(String keyword, Pageable pageable) {
-        return iUserRepository.findAllByNameContainingOrderByName(keyword,pageable);
+        return iUserRepository.findAllByNameContainingOrderByName(keyword, pageable);
     }
 
     @Override

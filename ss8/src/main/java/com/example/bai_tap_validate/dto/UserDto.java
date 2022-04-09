@@ -3,12 +3,21 @@ package com.example.bai_tap_validate.dto;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.*;
+
 public class UserDto implements Validator {
 
     private Integer id;
+    @NotBlank(message = "Không được để trống")
     private String name;
+    @NotNull(message = "Không được để trống")
+    @Pattern(regexp ="[09(1|3|7|8)[0-9]{7}]",message = "Số điện thoại phải có 10 số và các đầu 091,093,097,098")
     private Integer phone;
+    @NotNull(message = "Không được để trống")
+    @Min(value = 18,message = "Tuổi phải lớn hơn 18")
     private Integer age;
+    @NotBlank(message = "Không được để trống")
+    @Email(message = "Vui lòng viết đúng định dạng email")
     private String mail;
 
     public UserDto() {

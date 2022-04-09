@@ -10,9 +10,9 @@ public class UserDto implements Validator {
     private Integer id;
     @NotBlank(message = "Không được để trống")
     private String name;
-    @NotNull(message = "Không được để trống")
-    @Pattern(regexp ="[09(1|3|7|8)[0-9]{7}]",message = "Số điện thoại phải có 10 số và các đầu 091,093,097,098")
-    private Integer phone;
+    @NotBlank(message = "Không được để trống")
+    @Pattern(regexp ="[09(1|3|7|8)]",message = "Số điện thoại phải có đầu số 091,093,097,098")
+    private String phone;
     @NotNull(message = "Không được để trống")
     @Min(value = 18,message = "Tuổi phải lớn hơn 18")
     private Integer age;
@@ -39,11 +39,11 @@ public class UserDto implements Validator {
         this.name = name;
     }
 
-    public Integer getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Integer phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

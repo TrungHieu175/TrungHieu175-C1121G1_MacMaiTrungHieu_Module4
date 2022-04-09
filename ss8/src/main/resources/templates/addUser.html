@@ -36,7 +36,7 @@
             </div>
             <div>
                 <label th:text="Phone" th:for="phone"></label>
-                <input type="number" th:field="*{phone}" class="form-control" placeholder="Phone"/>
+                <input type="text" th:field="*{phone}" class="form-control" placeholder="Phone"/>
             </div>
             <div>
                 <h6 th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></h6>
@@ -50,7 +50,7 @@
             </div>
             <div>
                 <label th:text="Mail" th:for="mail"></label>
-                <input type="number" th:field="*{mail}" class="form-control" placeholder="Mail"/>
+                <input type="text" th:field="*{mail}" class="form-control" placeholder="Mail"/>
             </div>
             <div>
                 <h6 th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}" style="color: red"></h6>

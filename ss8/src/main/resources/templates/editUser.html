@@ -50,7 +50,7 @@
         </div>
         <div>
             <label th:text="Mail" th:for="mail"></label>
-            <input type="number" th:field="*{mail}" class="form-control" placeholder="Mail"/>
+            <input type="text" th:field="*{mail}" class="form-control" placeholder="Mail"/>
         </div>
         <div>
             <h6 th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}" style="color: red"></h6>

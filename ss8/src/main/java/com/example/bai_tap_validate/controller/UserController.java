@@ -40,8 +40,6 @@ public class UserController {
 
     @GetMapping("addUser")
     public String addSaveNote(Model model) {
-        List<User> userList = iUserService.findAll();
-        model.addAttribute("userList", userList);
         model.addAttribute("userDto", new UserDto());
         return "addUser";
     }
@@ -56,7 +54,7 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String save(@Validated @ModelAttribute("user") UserDto userDto, BindingResult bindingResult, Model model) {
+    public String save(@Validated UserDto userDto, BindingResult bindingResult, Model model) {
         new UserDto().validate(userDto, bindingResult);
         if (bindingResult.hasErrors()) {
             return "addUser";

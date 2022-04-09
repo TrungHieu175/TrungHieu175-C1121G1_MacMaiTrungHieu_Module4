@@ -9,7 +9,7 @@ public class SaveNote {
     private Integer id;
     private String timeStar;
     private String term;
-    private String deposits;
+    private Integer deposits;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
@@ -42,11 +42,11 @@ public class SaveNote {
         this.term = term;
     }
 
-    public String getDeposits() {
+    public Integer getDeposits() {
         return deposits;
     }
 
-    public void setDeposits(String deposits) {
+    public void setDeposits(Integer deposits) {
         this.deposits = deposits;
     }
 

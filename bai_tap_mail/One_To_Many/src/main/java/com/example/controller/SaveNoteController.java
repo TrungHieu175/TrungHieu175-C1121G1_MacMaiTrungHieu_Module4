@@ -64,7 +64,7 @@ public class SaveNoteController {
 
     @PostMapping("/save")
     public String save(@Validated @ModelAttribute("saveNote") SaveNoteDto saveNoteDto , BindingResult bindingResult, Model model ) {
-        new SaveNoteDto().validate(saveNoteDto,bindingResult);
+        saveNoteDto.validate(saveNoteDto,bindingResult);
         if (bindingResult.hasErrors()){
             model.addAttribute("customerList",iCustomerService.findAll());
             return "addSaveNote";

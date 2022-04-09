@@ -25,7 +25,7 @@ public class UserController {
     private IUserService iUserService;
 
     @GetMapping({"", "listUser"})
-    public String goList(Model model, @PageableDefault(value = 2) Pageable pageable, @RequestParam Optional<String> keyword, @ModelAttribute User user) {
+    public String goList(Model model, @PageableDefault(value = 2) Pageable pageable, @RequestParam Optional<String> keyword) {
         String keywordValue = keyword.orElse("");
         Page<User> userPage;
         if (keyword.isPresent()) {

@@ -11,7 +11,7 @@ public class UserDto implements Validator {
     @NotBlank(message = "Không được để trống")
     private String name;
     @NotBlank(message = "Không được để trống")
-    @Pattern(regexp ="[09(1|3|7|8)]",message = "Số điện thoại phải có đầu số 091,093,097,098")
+    @Pattern(regexp ="^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$",message = "Số điện thoại phải có 10 số nếu đầu số không phải 0 thì là 9 số")
     private String phone;
     @NotNull(message = "Không được để trống")
     @Min(value = 18,message = "Tuổi phải lớn hơn 18")

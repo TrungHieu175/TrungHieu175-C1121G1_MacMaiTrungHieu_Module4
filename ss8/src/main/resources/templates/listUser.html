@@ -70,7 +70,7 @@
         <span th:text="${userPage.number + 1}"></span> /
         <span th:text="${userPage.totalPages}"></span>
         <a th:if="${userPage.hasNext()}"
-           th:href="@{/listSaveNote(page=${userPage.number + 1},keyword=${keywordValue})}">Next</a>
+           th:href="@{/listUser(page=${userPage.number + 1},keyword=${keywordValue})}">Next</a>
     </div>
 </div>
 </body>

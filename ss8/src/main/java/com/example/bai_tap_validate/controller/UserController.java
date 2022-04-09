@@ -54,7 +54,7 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String save(@Validated UserDto userDto, BindingResult bindingResult, Model model) {
+    public String save(@Validated @ModelAttribute("userDto") UserDto userDto, BindingResult bindingResult, Model model) {
         new UserDto().validate(userDto, bindingResult);
         if (bindingResult.hasErrors()) {
             return "addUser";

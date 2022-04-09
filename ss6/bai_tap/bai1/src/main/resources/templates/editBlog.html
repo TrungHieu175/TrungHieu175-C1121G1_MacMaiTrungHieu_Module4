@@ -12,7 +12,7 @@
   <form th:object="${blog}" th:action="@{/save}" method="post">
     <input type="hidden" th:field="*{id}">
     <div>
-      <label th:text="Content" th:for="name"></label>
+      <label th:text="Content" th:for="content"></label>
       <input type="text" th:field="*{content}" class="form-control"/>
     </div>
     <div style="clear: both; display: block; height: 10px"></div>

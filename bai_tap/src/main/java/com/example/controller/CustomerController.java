@@ -35,13 +35,13 @@ public class CustomerController {
     }
 
     @GetMapping("/addCustomer")
-    public String addCategory(Model model) {
+    public String addCustomer(Model model) {
         model.addAttribute("customer", new CustomerDto());
         return "addCustomer";
     }
 
     @PostMapping("/saveCustomer")
-    public String saveCategory(@Validated @ModelAttribute("customer") CustomerDto customerDto, BindingResult bindingResult, Model model) {
+    public String saveCustomer(@Validated @ModelAttribute("customer") CustomerDto customerDto, BindingResult bindingResult, Model model) {
         new CustomerDto().validate(customerDto, bindingResult);
         if (bindingResult.hasErrors()) {
             return "addCustomer";
@@ -53,14 +53,16 @@ public class CustomerController {
         }
     }
         @GetMapping("editCustomer/{id}")
-        public String editCategory (@PathVariable Integer id, Model model){
+        public String editCustomer (@PathVariable Integer id, Model model){
             Customer customer = iCustomerService.findById(id);
-            model.addAttribute("customer", customer);
+            CustomerDto customerDto = new CustomerDto();
+            BeanUtils.copyProperties(customer,customerDto);
+            model.addAttribute("customer", customerDto);
             return "editCustomer";
         }
 
         @GetMapping("/deleteCustomer/{id}")
-        public String deleteCategory (@PathVariable Integer id, Model model){
+        public String deleteCustomer (@PathVariable Integer id, Model model){
             iCustomerService.deleteById(id);
             return "redirect:/listCustomer";
         }

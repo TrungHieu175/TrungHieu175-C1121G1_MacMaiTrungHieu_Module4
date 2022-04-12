@@ -10,6 +10,4 @@ public interface ISaveNoteRepository extends JpaRepository<SaveNote,Integer> {
     Page<SaveNote> findAllByCustomerNameContaining(String name, Pageable pageable);
 
     Page<SaveNote> findAllByOrderByTimeStar(Pageable pageable);
-
-
 }

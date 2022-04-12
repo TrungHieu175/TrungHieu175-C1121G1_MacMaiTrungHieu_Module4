@@ -14,6 +14,6 @@ public interface IBookService {
 
     Page<Book> findByName(String keyword, Pageable pageable);
 
-    Page<Book> findAllSaveNote(Pageable pageable);
+    Page<Book> findAllBook(Pageable pageable);
 
 }

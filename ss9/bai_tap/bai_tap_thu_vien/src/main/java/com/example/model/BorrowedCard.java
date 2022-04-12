@@ -8,7 +8,6 @@ public class BorrowedCard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nameCard;
 
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
@@ -25,11 +24,11 @@ public class BorrowedCard {
         this.id = id;
     }
 
-    public String getNameCard() {
-        return nameCard;
+    public Book getBook() {
+        return book;
     }
 
-    public void setNameCard(String nameCard) {
-        this.nameCard = nameCard;
+    public void setBook(Book book) {
+        this.book = book;
     }
 }

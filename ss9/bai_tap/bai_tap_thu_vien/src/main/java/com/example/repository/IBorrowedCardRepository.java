@@ -5,6 +5,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IBorrowebCardRepository extends JpaRepository<BorrowedCard,Integer> {
-    Page<BorrowedCard> findAllBorrowedCard(Pageable pageable);
+public interface IBorrowedCardRepository extends JpaRepository<BorrowedCard,Integer> {
+    Page<BorrowedCard> findAllByOrderById(Pageable pageable);
 }

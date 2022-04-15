@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $('document').ready(function () {
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "GET", //GET, DELETE, PUT...
+                url: "http://localhost:8080/smartphones/list",
+                success: function(resultSuccess){
+                    let smartphoneList = resultSuccess;
+                    let outHTML = `
+                        <tr>
+                            <th>No</th>
+                            <th>Producer</th>
+                            <th>Model</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    `;
+
+                    for (let i = 0; i < smartphoneList.length; i++) {
+                        outHTML += `
+                        <tr>
+                            <td>${i + 1}</td>
+                            <td>${smartphoneList[i].producer}</td>
+                            <td>${smartphoneList[i].model}</td>
+                            <td>${smartphoneList[i].price}</td>
+                            <td ><a href="update.html?id=${smartphoneList[i].id}">Update</a></td>
+                        </tr>
+                        `;
+                    }
+                    $("#bodySmartphone").html(outHTML);
+                },
+                error: function(resultError) {
+                    alert("He thong dang bao tri");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row w-50 mx-auto">
+        <div class="col-lg-10">
+            <input class="form-control" type="text" id="keyword">
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-primary" id="btnSearch">Search</button>
+        </div>
+    </div>
+    <div class="row w-50 mx-auto">
+        <div class="col-lg-12">
+            <h2>List smart phone</h2>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Producer</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody id="bodySmartphone">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

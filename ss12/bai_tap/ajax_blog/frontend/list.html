@@ -52,14 +52,47 @@
 
                 </tbody>
             </table>
+            <a id="loadMore" >Load More</a>
         </div>
     </div>
 </div>
 <script>
+    let count = 1;
+    let page = 0;
+    $("#loadMore").click(function () {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: "http://localhost:8080/list?page=" + (page++),
+            success: function(resultSuccess){
+                let blogList = resultSuccess.content;
+                let outHTML = "";
+
+                for (let i = 0; i < blogList.length; i++) {
+                    outHTML += `
+                        <tr>
+                            <td>${count++}</td>
+                            <td>${blogList[i].id}</td>
+                            <td>${blogList[i].content}</td>
+                            <td>${blogList[i].category.nameCategory}</td>
+                            <td ><a href="update.html?id=${blogList[i].id}">Update</a></td>
+                        </tr>
+                        `;
+                }
+                $("#bodyBlog").append(outHTML);
+            },
+            error: function(resultError) {
+                alert("He thong dang bao tri");
+            }
+        });
+    });
+
     $("#btnSearch").click(function() {
 
         let keywordVal = $("#keyword").val();
-
         $.ajax({
             headers: {
                 'Accept': 'application/json',
@@ -74,10 +107,10 @@
                 for (let i = 0; i < blogList.length; i++) {
                     outHTML += `
                         <tr>
-                            <td>${i + 1}</td>
-                            <td>${blogList[i].ID}</td>
+                            <td>${count++}</td>
+                            <td>${blogList[i].id}</td>
                             <td>${blogList[i].content}</td>
-                            <td>${blogList[i].category}</td>
+                            <td>${blogList[i].category.nameCategory}</td>
                             <td ><a href="update.html?id=${blogList[i].id}">Update</a></td>
                         </tr>
                         `;
@@ -89,6 +122,7 @@
             }
         });
     });
+
 </script>
 </body>
 </html>

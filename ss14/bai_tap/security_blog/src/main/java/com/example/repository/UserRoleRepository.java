@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface UserRoleRepository extends JpaRepository<UserRole,Long> {
-    List<UserRole> findAllBy(AppUser appUser);
+    List<UserRole> findByAppUser(AppUser appUser);
 }

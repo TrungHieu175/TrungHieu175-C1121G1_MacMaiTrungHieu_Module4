@@ -38,7 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         System.out.println("Found User: " + appUser);
 
         // [ROLE_USER, ROLE_ADMIN,..]
-        List<UserRole> userRoles = this.userRoleRepository.findAllBy(appUser);
+        List<UserRole> userRoles = this.userRoleRepository.findByAppUser(appUser);
 
         List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>();
         if (userRoles != null) {

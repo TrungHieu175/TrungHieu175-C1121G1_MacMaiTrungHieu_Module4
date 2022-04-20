@@ -25,28 +25,31 @@
 <div class="col-3"></div>
 <div class="container col-6">
     <h1>Manage Save Note</h1>
+    Language: <a href="?lang=en">English</a> | <a href="?lang=vi">VietNam</a>
     <form action="/listSaveNote">
         <div class="input-group">
             <div class="form-outline">
                 <input type="text" id="form1" class="form-control" name="keyword"/>
-                <label class="form-label" for="form1" th:text="#{list.search}></label>
+                <label class="form-label" for="form1" th:text="#{list.search}"></label>
             </div>
-            <button type="submit" class="btn btn-primary">
+                <button type=" submit" class="btn btn-primary">
                 <i class="fas fa-search"></i>
-            </button>
-        </div>
+                </button>
+            </div>
     </form>
     <table class="table table-active">
         <tr>
-            <th th:text="#{list.code}></th>
-            <th th:text="#{list.name}></th>
-            <th th:text="#{list.time}></th>
-            <th th:text="#{list.term}></th>
-            <th th:text="#{list.deposite}></th>
-            <th th:text="#{list.edit}>Edit</th>
-            <th th:text="#{list.delete}>Delete</th>
+            <th th:text="#{list.code}"></th>
+            <th th:text=" #{list.name}"></th>
+            <th th:text="#{list.time}"></th>
+            <th th:text=" #{list.term}"></th>
+            <th th:text="#{list.deposite}"></th>
+            <th th:text=" #{list.edit}">Edit
+            </th>
+            <th th:text="#{list.delete}">Delete</th>
         </tr>
-        <tr th:each="saveNotes : ${saveNotes}">
+        <tr th:each=" saveNotes : ${saveNotes}
+            ">
             <td th:text="${saveNotes.id}"></td>
             <td th:text="${saveNotes.customer.name}"></td>
             <td th:text="${saveNotes.timeStar}"></td>

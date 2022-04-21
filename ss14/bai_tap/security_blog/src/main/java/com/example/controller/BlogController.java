@@ -25,7 +25,7 @@ public class BlogController {
     private IBlogService iBlogService;
 
     @Autowired
-    ICategoryService iCategoryService;
+    private ICategoryService iCategoryService;
 
 
     @GetMapping({"", "list"})

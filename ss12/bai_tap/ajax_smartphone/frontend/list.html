@@ -86,7 +86,7 @@
                             <td>${smartphoneList[i].producer}</td>
                             <td>${smartphoneList[i].model}</td>
                             <td>${smartphoneList[i].price}</td>
-                            <td ><a href="update.html?id=${smartphoneList[i].id}">Update</a></td>
+                            <td><a href="update.html?id=${smartphoneList[i].id}">Update</a></td>
                             <td><a class="deleteSmartphone" href="${smartphoneList[i].id}">Delete</a></td>
                         </tr>
                         `;
@@ -101,7 +101,6 @@
     $(document).ready(function () {
 
         $('.deleteSmartphone').click(function (event) {
-            //lay du lieu
             let a = $(this);
             let smartphoneId = a.attr("href");
             $.ajax({

@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.service.customer;
 
 import com.example.model.customer.CustomerType;
 import org.springframework.data.domain.Page;

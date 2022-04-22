@@ -1,8 +1,8 @@
-package com.example.service.impl;
+package com.example.service.impl.customer;
 
 import com.example.model.customer.Customer;
-import com.example.repository.ICustomerRepository;
-import com.example.service.ICustomerService;
+import com.example.repository.customer.ICustomerRepository;
+import com.example.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -37,7 +37,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public Page<Customer> findAllPaging(String keyword, Pageable pageable) {
-        return iCustomerRepository.findAllByNameContainingOrderById(keyword,pageable);
+        return iCustomerRepository.findAllByNameContaining(keyword,pageable);
     }
 
     @Override

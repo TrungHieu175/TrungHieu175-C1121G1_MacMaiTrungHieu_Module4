@@ -2,18 +2,11 @@ package com.example.controller;
 
 import com.example.model.contract.Contract;
 import com.example.model.customer.Customer;
-import com.example.model.employee.Division;
-import com.example.model.employee.EducationDegree;
 import com.example.model.employee.Employee;
-import com.example.model.employee.Position;
 import com.example.model.service.Service;
-import com.example.service.contract.IAttachServiceService;
 import com.example.service.contract.IContractService;
 import com.example.service.customer.ICustomerService;
-import com.example.service.employee.IDivisionService;
-import com.example.service.employee.IEducationDegreeService;
 import com.example.service.employee.IEmployeeService;
-import com.example.service.employee.IPositionService;
 import com.example.service.service.IServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -46,8 +39,8 @@ public class ContractController {
     @Autowired
     private IContractService iContractService;
 
-    @GetMapping("viewContract")
-    public String goList(Model model, @PageableDefault(value = 5, sort = "contractId", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam Optional<String> keyword) {
+    @GetMapping("viewContractDetail")
+    public String goList(Model model, @PageableDefault(value = 5, sort = "contractDetailId", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam Optional<String> keyword) {
         String keywordValue = keyword.orElse("");
         Page<Contract> contractPage;
         if (keyword.isPresent()) {

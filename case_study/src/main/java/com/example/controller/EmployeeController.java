@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.dto.EmployeeDto;
 import com.example.model.employee.Division;
 import com.example.model.employee.EducationDegree;
 import com.example.model.employee.Employee;
@@ -61,7 +62,7 @@ public class EmployeeController {
         model.addAttribute("positionList", positionList);
         model.addAttribute("educationDegreeList", educationDegreeList);
         model.addAttribute("divisionList", divisionList);
-        model.addAttribute("employee", new Employee());
+        model.addAttribute("employee", new EmployeeDto());
         return "createEm";
     }
 

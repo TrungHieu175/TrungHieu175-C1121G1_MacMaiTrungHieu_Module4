@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import com.example.dto.ContractDto;
+import com.example.dto.CustomerDto;
 import com.example.model.contract.Contract;
 import com.example.model.customer.Customer;
 import com.example.model.employee.Employee;
@@ -8,6 +10,7 @@ import com.example.service.contract.IContractService;
 import com.example.service.customer.ICustomerService;
 import com.example.service.employee.IEmployeeService;
 import com.example.service.service.IServiceService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,10 +18,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
@@ -61,7 +63,7 @@ public class ContractController {
         model.addAttribute("employeeList", employeeList);
         model.addAttribute("customerList", customerList);
         model.addAttribute("serviceList", serviceList);
-        model.addAttribute("contract", new Contract());
+        model.addAttribute("contract", new ContractDto());
         return "createCon";
     }
 
@@ -71,17 +73,26 @@ public class ContractController {
         List<Employee> employeeList = iEmployeeService.findAll();
         List<Customer> customerList = iCustomerService.findAll();
         List<Service> serviceList = iServiceService.findAll();
+        ContractDto contractDto = new ContractDto();
+        BeanUtils.copyProperties(contractId,contractDto);
         model.addAttribute("employeeList", employeeList);
         model.addAttribute("customerList", customerList);
         model.addAttribute("serviceList", serviceList);
-        model.addAttribute("contractId", contractId);
+        model.addAttribute("contractId", contractDto);
         return "editCon";
     }
 
     @PostMapping("/saveCon")
-    public String save(Employee employee) {
-        iEmployeeService.save(employee);
-        return "redirect:/viewContract";
+    public String save(@Validated @ModelAttribute("contract") ContractDto contractDto , BindingResult bindingResult, Model model , Contract contract) {
+        contractDto.validate(contractDto,bindingResult);
+        if (bindingResult.hasErrors()){
+            model.addAttribute("customerList",iCustomerService.findAll());
+            return "createCon";
+        }else {
+            BeanUtils.copyProperties(contractDto,contract);
+            iContractService.save(contract);
+            return "redirect:/viewContract";
+        }
     }
 
     @GetMapping("/removeEm")

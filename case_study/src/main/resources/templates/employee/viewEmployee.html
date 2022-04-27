@@ -72,7 +72,7 @@
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a href="/addCus">
+                    <a href=/addCus">
                         <button type="button" class="btn btn-info btn-rounded">Add Customer</button>
                     </a>
                 </li>
@@ -84,7 +84,7 @@
                 </li>
                 <li></li>
                 <li class="nav-item">
-                    <a href="/addEm">
+                    <a href="/employees/addEm">
                         <button type="button" class="btn btn-info btn-rounded">Add Employee</button>
                     </a>
                 </li>
@@ -93,7 +93,7 @@
 
             <div class="d-flex align-items-center">
                 <div>
-                    <form action="/viewEmployee">
+                    <form action="/employees/viewEmployee">
                         <div class="input-group">
                             <div class="form-outline">
                                 <input type="text" id="form1" placeholder="Search" name="keyword"/>
@@ -172,7 +172,7 @@
                                     <td class="cell100 column8" th:text="${em.educationDegree.name}"></td>
                                     <td class="cell100 column8" th:text="${em.division.name}"></td>
                                     <td class="cell100 column8" colspan="2">
-                                        <a th:href="@{/editEm/{id}(id=${em.id})}" class="btn btn-primary">Edit</a>
+                                        <a th:href="@{/employees/editEm/{id}(id=${em.id})}" class="btn btn-primary">Edit</a>
                                         <button class="btn btn-success" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal"
                                                 th:onclick="'javascript:deleteCustomer(' + ${em.id} + ')'">Remove
@@ -189,11 +189,11 @@
     </div>
     <div>
         <a th:if="${list.hasPrevious()}"
-           th:href="@{/viewEmployee(page=${list.number - 1},keyword=${keywordValue})}">Previous</a>
+           th:href="@{/employees/viewEmployee(page=${list.number - 1},keyword=${keywordValue})}">Previous</a>
         <span th:text="${list.number + 1}"></span> /
         <span th:text="${list.totalPages}"></span>
         <a th:if="${list.hasNext()}"
-           th:href="@{/viewEmployee(page=${list.number + 1},keyword=${keywordValue})}">Next</a>
+           th:href="@{/employees/viewEmployee(page=${list.number + 1},keyword=${keywordValue})}">Next</a>
     </div>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -206,7 +206,7 @@
             <div class="modal-body" style="color: red">
                 Bạn có muốn xóa hay không?
             </div>
-            <form id="form-delete" method="get" action="/removeEm">
+            <form id="form-delete" method="get" action="/employees/removeEm">
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary">Delete</button>

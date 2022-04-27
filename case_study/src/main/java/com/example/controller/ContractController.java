@@ -41,7 +41,7 @@ public class ContractController {
     @Autowired
     private IContractService iContractService;
 
-    @GetMapping("viewContractDetail")
+    @GetMapping("viewContract")
     public String goList(Model model, @PageableDefault(value = 5, sort = "contractDetailId", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam Optional<String> keyword) {
         String keywordValue = keyword.orElse("");
         Page<Contract> contractPage;
@@ -52,7 +52,7 @@ public class ContractController {
         }
         model.addAttribute("list", contractPage);
         model.addAttribute("keywordValue", keywordValue);
-        return "viewContract";
+        return "contract/viewContract";
     }
 
     @GetMapping("addCon")
@@ -64,7 +64,7 @@ public class ContractController {
         model.addAttribute("customerList", customerList);
         model.addAttribute("serviceList", serviceList);
         model.addAttribute("contract", new ContractDto());
-        return "createCon";
+        return "contract/createCon";
     }
 
     @GetMapping("editCon/{id}")
@@ -79,7 +79,7 @@ public class ContractController {
         model.addAttribute("customerList", customerList);
         model.addAttribute("serviceList", serviceList);
         model.addAttribute("contractId", contractDto);
-        return "editCon";
+        return "contract/editCon";
     }
 
     @PostMapping("/saveCon")
@@ -95,7 +95,7 @@ public class ContractController {
         }
     }
 
-    @GetMapping("/removeEm")
+    @GetMapping("/removeCon")
     public String delete(RedirectAttributes redirectAttributes, @RequestParam Integer id){
         iEmployeeService.deleteById(id);
         return "redirect:/viewContract";

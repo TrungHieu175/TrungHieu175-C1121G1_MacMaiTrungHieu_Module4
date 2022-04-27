@@ -73,19 +73,28 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <div class="contact-form">
-                <h1>Create Contract</h1>
-                <form th:object="${contract}" th:action="@{saveCon}" method="post">
+                <h1>Edit Contract</h1>
+                <form th:object="${contractId}" th:action="@{saveCon}" method="post">
+                    <input type="hidden" th:field="*{contractId}">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputStarDate" >Star Date<span style="color: red">*</span></label>
                                 <input type="date" class="form-control" id="inputStarDate" th:field="*{starDate}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('starDate')}" th:errors="*{starDate}"
+                                        style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputEndDate">EndDate<span style="color: red">*</span></label>
                                 <input type="date" class="form-control" id="inputEndDate" th:field="*{endDate}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"
+                                        style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,12 +103,20 @@
                             <div class="form-group">
                                 <label for="inputDeposit" >Deposit<span style="color: red">*</span></label>
                                 <input type="text" class="form-control" id="inputDeposit" th:field="*{deposit}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"
+                                        style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputTotalMoney">Total Money<span style="color: red">*</span></label>
                                 <input type="text" class="form-control" id="inputTotalMoney" th:field="*{totalMoney}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"
+                                        style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                     </div>

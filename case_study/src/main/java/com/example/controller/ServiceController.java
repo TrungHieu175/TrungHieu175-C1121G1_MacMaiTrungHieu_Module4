@@ -45,7 +45,7 @@ public class ServiceController {
         }
         model.addAttribute("list", servicePage);
         model.addAttribute("keywordValue", keywordValue);
-        return "viewService";
+        return "service/viewService";
     }
 
     @GetMapping("addSer")
@@ -55,7 +55,7 @@ public class ServiceController {
         model.addAttribute("rentTypeList", rentTypeList);
         model.addAttribute("serviceTypeList", serviceTypeList);
         model.addAttribute("service", new Service());
-        return "createSer";
+        return "service/createSer";
     }
 
     @GetMapping("editSer/{id}")
@@ -66,7 +66,7 @@ public class ServiceController {
         model.addAttribute("rentTypeList", rentTypeList);
         model.addAttribute("serviceTypeList", serviceTypeList);
         model.addAttribute("serviceId", serviceId);
-        return "editSer";
+        return "service/editSer";
     }
 
     @PostMapping("/saveSer")

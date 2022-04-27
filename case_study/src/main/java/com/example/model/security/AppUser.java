@@ -12,7 +12,6 @@ import java.util.List;
 public class AppUser {
 
     @Id
-    @GeneratedValue
     @Column(name = "User_Name", length = 36, nullable = false)
     private String userName;
 

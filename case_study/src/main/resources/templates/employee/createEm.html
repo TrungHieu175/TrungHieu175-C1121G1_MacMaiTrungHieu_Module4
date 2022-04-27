@@ -74,18 +74,24 @@
         <div class="col-md-8 mx-auto">
             <div class="contact-form">
                 <h1>Create Employee</h1>
-                <form th:object="${employee}" th:action="@{saveEm}" method="post">
+                <form th:object="${employee}" th:action="@{/employees/saveEm}" method="post">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputName" >Name<span style="color: red">*</span></label>
                                 <input type="text" class="form-control" id="inputName" th:field="*{name}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputEmail">Email<span style="color: red">*</span></label>
                                 <input type="email" class="form-control" id="inputEmail" th:field="*{email}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,18 +100,27 @@
                             <div class="form-group">
                                 <label for="inputPhone" >Phone<span style="color: red">*</span></label>
                                 <input type="text" class="form-control" id="inputPhone" th:field="*{phone}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="inputIdCard">Id Card<span style="color: red">*</span></label>
                                 <input type="text" class="form-control" id="inputIdCard" th:field="*{idCard}" required>
+                                <div>
+                                    <h6 th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}" style="color: red"></h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputGender">Salary<span style="color: red">*</span></label>
                         <input type="text" class="form-control" id="inputGender" th:field="*{salary}" required>
+                        <div>
+                            <h6 th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}" style="color: red"></h6>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPosition">Position<span style="color: red">*</span></label>
@@ -128,10 +143,16 @@
                     <div class="form-group">
                         <label for="inputBirthDay">BirthDay<span style="color: red">*</span></label>
                         <input type="date" class="form-control" id="inputBirthDay" th:field="*{birthday}" required>
+                        <div>
+                            <h6 th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}" style="color: red"></h6>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="inputMessage">Address</label>
                         <textarea class="form-control" id="inputMessage" rows="5" th:field="*{address}" required></textarea>
+                        <div>
+                            <h6 th:if="${#fields.hasErrors('address')}" th:errors="*{address}" style="color: red"></h6>
+                        </div>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>

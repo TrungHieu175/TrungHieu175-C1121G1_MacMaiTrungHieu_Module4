@@ -148,30 +148,32 @@
                             <table>
                                 <thead>
                                 <tr class="row100 head">
-                                    <th class="cell100 column2">Birthday</th>
-                                    <th class="cell100 column3">Gender</th>
-                                    <th class="cell100 column4">Id Card</th>
-                                    <th class="cell100 column5">Phone</th>
-                                    <th class="cell100 column6">Email</th>
-                                    <th class="cell100 column7">Address</th>
-                                    <th class="cell100 column8">Customer Type</th>
+                                    <th class="cell100 column2">Area</th>
+                                    <th class="cell100 column3">Cost</th>
+                                    <th class="cell100 column4">Max People</th>
+                                    <th class="cell100 column5">Standard Room</th>
+                                    <th class="cell100 column6">Convenience</th>
+                                    <th class="cell100 column7">Pool Area</th>
+                                    <th class="cell100 column7">Floor</th>
+                                    <th class="cell100 column8">Service Type</th>
                                     <th class="cell100 column8">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr class="row100 body" th:each="cus : ${list}">
-                                    <td class="cell100 column2" th:text="${cus.birthday}"></td>
-                                    <td class="cell100 column3" th:text="${cus.gender}"></td>
-                                    <td class="cell100 column4" th:text="${cus.idCard}"></td>
-                                    <td class="cell100 column5" th:text="${cus.phone}"></td>
-                                    <td class="cell100 column6" th:text="${cus.email}"></td>
-                                    <td class="cell100 column7" th:text="${cus.address}"></td>
-                                    <td class="cell100 column8" th:text="${cus.customerType.typeName}"></td>
+                                    <td class="cell100 column2" th:text="${cus.area}"></td>
+                                    <td class="cell100 column3" th:text="${cus.cost}"></td>
+                                    <td class="cell100 column4" th:text="${cus.maxPeople}"></td>
+                                    <td class="cell100 column5" th:text="${cus.standardRoom}"></td>
+                                    <td class="cell100 column6" th:text="${cus.convenience}"></td>
+                                    <td class="cell100 column7" th:text="${cus.poolArea}"></td>
+                                    <td class="cell100 column7" th:text="${cus.floor}"></td>
+                                    <td class="cell100 column8" th:text="${cus.serviceType.name}"></td>
                                     <td class="cell100 column8" colspan="2">
-                                        <a th:href="@{/edit/{id}(id=${cus.id})}" class="btn btn-primary">Edit</a>
+                                        <a th:href="@{/editSer/{id}(id=${cus.serviceId})}" class="btn btn-primary">Edit</a>
                                         <button class="btn btn-success" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal"
-                                                th:onclick="'javascript:deleteCustomer(' + ${cus.id} + ')'">Remove
+                                                th:onclick="'javascript:deleteCustomer(' + ${cus.serviceId} + ')'">Remove
                                         </button>
                                     </td>
                                 </tr>
@@ -185,11 +187,11 @@
     </div>
     <div>
         <a th:if="${list.hasPrevious()}"
-           th:href="@{/index(page=${list.number - 1},keyword=${keywordValue})}">Previous</a>
+           th:href="@{/viewService(page=${list.number - 1},keyword=${keywordValue})}">Previous</a>
         <span th:text="${list.number + 1}"></span> /
         <span th:text="${list.totalPages}"></span>
         <a th:if="${list.hasNext()}"
-           th:href="@{/index(page=${list.number + 1},keyword=${keywordValue})}">Next</a>
+           th:href="@{/viewService(page=${list.number + 1},keyword=${keywordValue})}">Next</a>
     </div>
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

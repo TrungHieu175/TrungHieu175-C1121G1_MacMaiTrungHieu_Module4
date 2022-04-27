@@ -35,7 +35,7 @@ public class CustomerController {
     @Autowired
     private IContractService iContractService;
 
-    @GetMapping({"", "index"})
+    @GetMapping("index")
     public String goList(Model model, @PageableDefault(value = 5, sort = "customerId", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam Optional<String> keyword) {
         String keywordValue = keyword.orElse("");
         Page<Customer> customerPage;
@@ -46,7 +46,7 @@ public class CustomerController {
         }
         model.addAttribute("list", customerPage);
         model.addAttribute("keywordValue", keywordValue);
-        return "index";
+        return "customer/index";
     }
 
     @GetMapping( "customerService")
@@ -61,7 +61,7 @@ public class CustomerController {
         model.addAttribute("list", contractPage);
 
         model.addAttribute("keywordValue", keywordValue);
-        return "listCustomerService";
+        return "customer/listCustomerService";
     }
 
 
@@ -70,7 +70,7 @@ public class CustomerController {
         List<CustomerType> customerTypeList = iCustomerTypeService.findAll();
         model.addAttribute("customerTypeList", customerTypeList);
         model.addAttribute("customer", new CustomerDto());
-        return "createCus";
+        return "customer/createCus";
     }
 
     @GetMapping("edit/{id}")
@@ -81,7 +81,7 @@ public class CustomerController {
         BeanUtils.copyProperties(customerId,customerDto);
         model.addAttribute("customerTypeList", customerTypeList);
         model.addAttribute("customerId", customerDto);
-        return "editCus";
+        return "customer/editCus";
     }
 
     @PostMapping("/save")
@@ -89,7 +89,7 @@ public class CustomerController {
         customerDto.validate(customerDto,bindingResult);
         if (bindingResult.hasErrors()){
             model.addAttribute("customerList",iCustomerService.findAll());
-            return "createCus";
+            return "customer/createCus";
         }else {
             BeanUtils.copyProperties(customerDto,customer);
             iCustomerService.save(customer);

@@ -16,16 +16,14 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
 
 @Controller
+@RequestMapping(value = "/employees")
 public class EmployeeController {
 
     @Autowired
@@ -40,7 +38,7 @@ public class EmployeeController {
     @Autowired
     private IPositionService iPositionService;
 
-    @GetMapping("viewEmployee")
+    @GetMapping("/viewEmployee")
     public String goList(Model model, @PageableDefault(value = 5, sort = "employeeId", direction = Sort.Direction.DESC) Pageable pageable, @RequestParam Optional<String> keyword) {
         String keywordValue = keyword.orElse("");
         Page<Employee> employeePage;
@@ -51,10 +49,10 @@ public class EmployeeController {
         }
         model.addAttribute("list", employeePage);
         model.addAttribute("keywordValue", keywordValue);
-        return "viewEmployee";
+        return "employee/viewEmployee";
     }
 
-    @GetMapping("addEm")
+    @GetMapping("/addEm")
     public String add(Model model) {
         List<Position> positionList = iPositionService.findAll();
         List<EducationDegree> educationDegreeList = iEducationDegreeService.findAll();
@@ -63,10 +61,10 @@ public class EmployeeController {
         model.addAttribute("educationDegreeList", educationDegreeList);
         model.addAttribute("divisionList", divisionList);
         model.addAttribute("employee", new EmployeeDto());
-        return "createEm";
+        return "employee/createEm";
     }
 
-    @GetMapping("editEm/{id}")
+    @GetMapping("/editEm/{id}")
     public String edit(@PathVariable Integer id, Model model) {
         Employee employeeId = iEmployeeService.findById(id);
         List<Position> positionList = iPositionService.findAll();
@@ -76,18 +74,18 @@ public class EmployeeController {
         model.addAttribute("educationDegreeList", educationDegreeList);
         model.addAttribute("divisionList", divisionList);
         model.addAttribute("employeeId", employeeId);
-        return "editEm";
+        return "employee/editEm";
     }
 
     @PostMapping("/saveEm")
     public String save(Employee employee) {
         iEmployeeService.save(employee);
-        return "redirect:/viewEmployee";
+        return "redirect:/employees/viewEmployee";
     }
 
     @GetMapping("/removeEm")
     public String delete(RedirectAttributes redirectAttributes, @RequestParam Integer id){
         iEmployeeService.deleteById(id);
-        return "redirect:/viewEmployee";
+        return "redirect:/employees/viewEmployee";
     }
 }
